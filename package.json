@@ -1,6 +1,6 @@
 {
   "name": "react-combine-refs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Creates a new ref that updates combined refs",
   "main": "index.js",
   "repository": "git@github.com:yachaka/react-combine-refs.git",
