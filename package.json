@@ -1,0 +1,19 @@
+{
+  "name": "react-combine-refs",
+  "version": "1.0.0",
+  "description": "Creates a new ref that updates combined refs",
+  "main": "index.js",
+  "repository": "git@github.com:yachaka/react-combine-refs.git",
+  "author": "Ilyes Hermellin <yachaka@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "mocha test.js"
+  },
+  "devDependencies": {
+    "mocha": "^6.2.0",
+    "sinon": "^7.4.2"
+  },
+  "dependencies": {
+    "fast-memoize": "^2.5.1"
+  }
+}
