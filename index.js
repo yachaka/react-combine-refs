@@ -1,6 +1,4 @@
 
-var memoize = require('fast-memoize');
-
 function combineRefs() {
   var args = Array.prototype.slice.call(arguments);
 
@@ -10,8 +8,10 @@ function combineRefs() {
 
       if (typeof arg === 'function') {
         arg(el);
-      } else if (typeof arg === 'object' && arg.hasOwnProperty('current')) {
+      } else if (typeof arg === 'object' && arg !== null && arg.hasOwnProperty('current')) {
         arg.current = el;
+      } else if (arg === null) {
+        // No-op
       } else {
         console.warn('[react-combine-refs] Ref argument is neither an object with a .current property or a function. This is a no-op.');
       }
@@ -19,5 +19,4 @@ function combineRefs() {
   };
 }
 
-module.exports = memoize(combineRefs);
-module.exports.vanillaCombineRefs = combineRefs;
+module.exports = combineRefs;
